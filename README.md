@@ -54,5 +54,5 @@ pip install -r requirements.txt
 To run your project you can run the below command
 
 ```bash
-flask run
+flask --app run.py run --debug
 ```
