@@ -56,5 +56,3 @@ To run your project you can run the below command
 ```bash
 flask run
 ```
-
-Note: if you encounter any issue you can reach out to your project Lead
