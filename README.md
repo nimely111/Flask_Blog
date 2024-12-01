@@ -16,7 +16,7 @@ The backend framework used in this project is Flask, a lightweight and versatile
 
 ### Getting your Project to run
 
-After you have cloned this repository, `cd` to the project directory `Xenia` and set up your virtual environment. To do this, run:
+After you have cloned this repository, `cd` to the project directory `Flask_Blog` and set up your virtual environment. To do this, run:
 
 ```bash
 python3 -m venv venv
