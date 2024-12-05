@@ -51,6 +51,39 @@ After this you can install the project requirements by installing the requiremen
 pip install -r requirements.txt
 ```
 
+To apply the migration run
+
+```bash
+flask --app flaskblog db migrate -m "initial migration"
+```
+
+Flask needs to know where this application instance (app) is located. Since this app instance is defined in a file directory flaskblog, you need to specify this to Flask.
+
+You can do this in two ways:
+
+1. Using the --app Option
+   Run the flask command with the
+
+```bash
+flask --app flaskblog db init
+```
+
+to initialize the db.
+
+To Creates a migration file based on model changes.
+run this command
+
+```bash
+flask --app flaskblog db migrate -m "initial migration"
+```
+
+To apply the migration to the database.
+run this command
+
+```bash
+ flask --app flaskblog db upgrade
+```
+
 To run your project you can run the below command
 
 ```bash
