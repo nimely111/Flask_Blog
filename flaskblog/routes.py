@@ -47,8 +47,8 @@ def register():
         # add user to the changes that is to be made to the database
         db.session.add(user)
         db.session.commit()
-        flash(f'Your Account has been create! You are now able to login', 'success')
-        print(f'Your Account has been create! You are now able to login')
+        flash(f'Your Account has been created! You are now able to login', 'success')
+        print(f'Your Account has been created! You are now able to login')
         return redirect(url_for('login'))
     return render_template('register.html', title="Register", form=form)
 

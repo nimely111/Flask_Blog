@@ -40,15 +40,19 @@ class RegistrationForm(FlaskForm):
                     )
     submit = SubmitField('Sign Up')
     
+    # creating a custom valiation
     def validate_username(self, username):
+        # checking if the user credentials is already in our db then we get the first user else we get none and the new user signin successfully
         user = User.query.filter_by(username=username.data).first()
         if user:
-            raise ValidationError('That username is take. Please choose a different one.')
+            raise ValidationError('That username is taken. Please choose a different one.')
     
+    # creating a custom valiations
     def validate_email(self, email):
+        # checking if the user credentials is already in our db then we get the first user else we get none and the new user signin successfully
         user = User.query.filter_by(email=email.data).first()
         if user:
-            raise ValidationError('That email is take. Please choose a different one.')
+            raise ValidationError('That email is taken. Please choose a different one.')
     
 # Login form
 class LoginForm(FlaskForm):
