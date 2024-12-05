@@ -58,7 +58,9 @@ def login():
         return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
+        # checks if the email enter by the user matcher what we have in the db, if so the system should match the first user with that email within the db 
         user = User.query.filter_by(email=form.email.data).first()
+        # checks if user exist and the password they enter matches what we have n the db then, they must be login.
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, form.remember.data)
             return redirect(url_for('home'))
