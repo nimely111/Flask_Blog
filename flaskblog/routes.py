@@ -65,7 +65,7 @@ def login():
             login_user(user, form.remember.data)
             return redirect(url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check email and password', 'danger')
+            flash('Login Unsuccessful. Please check your email and password', 'danger')
     return render_template('login.html', title="Login", form=form)
 
 
