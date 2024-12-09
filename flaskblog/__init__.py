@@ -17,6 +17,7 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view ='login' #expose login_view location to extension
+login_manager.login_message = 'Hello! Please log in to access this page'
 login_manager.login_message_category = 'info'
 migrate = Migrate(app, db)
 
